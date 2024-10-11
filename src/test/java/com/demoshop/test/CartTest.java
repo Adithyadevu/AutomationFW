@@ -9,14 +9,17 @@ public class CartTest extends BaseTest {
 	public void verifyUserisAbleToAddCart() {
 		
       loginPage.searchProduct(prop.getProperty("productToSearch"));
-      cartPage.viewLaptop();
-      String actualProductName= cartPage. getProductTitle();
+      
+      
+     
+      
+        cartPage.viewLaptop();
+        String actualProductName= cartPage. getProductTitle();
 	    Assert.assertEquals(prop.getProperty("expectedProductName"), actualProductName, "Product does not match");
-		cartPage.addProductToCart();
 		
 		
+	    cartPage.addProductToCart();
 		String actualText = cartPage.getConfirmationMsg();
-	    
         Assert.assertEquals(prop.getProperty("expectedText"), actualText, "Product is not added to cart");
 			
 	}

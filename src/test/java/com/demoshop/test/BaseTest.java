@@ -10,26 +10,32 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import com.demoshop.page.Objects.CartPage;
 import com.demoshop.page.Objects.CheckOutPage;
 import com.demoshop.page.Objects.JewelryPage;
 import com.demoshop.page.Objects.LoginPage;
 import com.demoshop.page.Objects.ProductPage;
+import com.demoshop.page.Objects.ProductRemoveFromCart;
 import com.demoshop.page.Objects.RegisterPage;
 import com.demoshop.utils.TestProperties;
 
     public class BaseTest {
     
-
     	WebDriver driver= null;
     	public Properties prop;
     	
-       @BeforeMethod()
-    	public void initDriver() throws IOException {
+       @BeforeMethod(alwaysRun=true)
+       @Parameters({"browserName"})
+    	public void initDriver(@Optional String browserName) throws IOException {
     	    prop = TestProperties.getProperties();
     	   System.out.println("In before Method");
-    	   String browserName = prop.getProperty("browser");
+    	   if(browserName==null || browserName.isEmpty()) {
+    		 browserName = prop.getProperty("browser"); 
+    	   }
+    	   
     	   System.out.println(browserName);
     		getDriver(browserName);
     		driver.manage().window().maximize();
@@ -62,7 +68,8 @@ import com.demoshop.utils.TestProperties;
     	public CartPage cartPage;
         public JewelryPage jewelryPage;
         public CheckOutPage checkoutpage;
-    	
+    	public ProductRemoveFromCart productremovefromcart;
+        
     	public void initPages() {
     		loginPage= new LoginPage(driver);
     	    registerPage = new RegisterPage(driver);
@@ -70,12 +77,14 @@ import com.demoshop.utils.TestProperties;
     	    cartPage= new CartPage(driver);
     	    jewelryPage = new JewelryPage(driver); 
     	    checkoutpage = new CheckOutPage(driver);
+    	    productremovefromcart = new ProductRemoveFromCart(driver);
     	}
     	
-    	@AfterMethod()
+    	@AfterMethod(alwaysRun=true)
     	public void tearDown() {
     		driver.quit();
     	}
+    	
     	}
    
 	

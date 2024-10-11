@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Excel Registeration(failed)">
+    <parameter name="browserName" value="Firefox"/>
+    <classes>
+      <class name="com.demoshop.test.ExcelRegisterationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initDriver"/>
+          <include name="verifyUserIsAbleToRegisterUsingCorrectCreds"/>
+        </methods>
+      </class> <!-- com.demoshop.test.ExcelRegisterationTest -->
+    </classes>
+  </test> <!-- Excel Registeration(failed) -->
+  <test thread-count="5" name="Rg DP2(failed)">
+    <parameter name="browserName" value="Firefox"/>
+    <classes>
+      <class name="com.demoshop.test.RegisterationDP2">
+        <methods>
+          <include name="initDriver"/>
+          <include name="tearDown"/>
+          <include name="verifyUserIsAbleToMultipleRegisterUsingCorrectCreds"/>
+        </methods>
+      </class> <!-- com.demoshop.test.RegisterationDP2 -->
+    </classes>
+  </test> <!-- Rg DP2(failed) -->
+</suite> <!-- Failed suite [Suite] -->

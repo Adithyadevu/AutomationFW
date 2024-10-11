@@ -3,12 +3,13 @@ package com.demoshop.test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.demoshop.page.Objects.CheckOutPage;
 import com.demoshop.utils.DataUtils;
 
 public class E2ECheckoutTest extends BaseTest{
 	
-	@Test
-	public void verifyNewUserRegistersAndCheckoutProduct() throws InterruptedException {
+	@Test(groups="Smoke")
+	public void verifyNewUserRegistersAndCheckoutProduct() {
 		
 		
 			    //Registering user
@@ -34,7 +35,9 @@ public class E2ECheckoutTest extends BaseTest{
 			     Assert.assertEquals(prop.getProperty("expectedText"), actualText, "Product is not added to cart");
 			    
 			     //navigate to cart
-			     cartPage.navigateToCart();
+			     cartPage.navigateToCart();//cartpageheading
+			     String  actualCartHeading = cartPage. tittleOfCart();
+			     Assert.assertEquals(prop.getProperty("expectedCartHeading"), actualCartHeading, "Not navigated to cart");
 			        
 			      //check the checkboxes
 			      checkoutpage.clickCheckBox();
@@ -43,17 +46,15 @@ public class E2ECheckoutTest extends BaseTest{
 			        
 			        //move to checkout
 			      checkoutpage.clickCheckOutBtn();
+			      String actualHeadingCheckOut =checkoutpage.checkOutTitle();
+				  Assert.assertEquals(prop.getProperty("expectedHeadingCheckOut"), actualHeadingCheckOut, "not navigated to checkout");
+				        
 			        
-			        
-			       //billing
-			      checkoutpage.selectCountry();
-			      Thread.sleep(3000);
-			      
-			      //shipping
-			      
-		
-		
-		
+			    
+		          //order confirm
+				  checkoutpage.detailsConfirmationOfOrder();
+				  String actualOrderPlaced= checkoutpage.orderPlacedMsg();
+			      Assert.assertEquals(prop.getProperty("expectedOrderPlaced"), actualOrderPlaced, "Order not placed");
 		
 		
 		    

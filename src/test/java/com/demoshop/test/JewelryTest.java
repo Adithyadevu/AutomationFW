@@ -14,10 +14,13 @@ public class JewelryTest extends BaseTest{
 		
 		String actualProductName=jewelryPage. getproducttitle();
 		Assert.assertEquals(prop.getProperty("expectedproductName"), actualProductName,"Product is not matching");
-	    jewelryPage.addcartchain();
 	    
-	   String actualmsg=jewelryPage.getmsgconfirmation();
-	   Assert.assertEquals(prop.getProperty("expectedText"), actualmsg,"Not added to cart");
+		
+	
+		jewelryPage.addcartchain(); 
+	    String actualmsg=jewelryPage.getmsgconfirmation();
+	    Assert.assertEquals(prop.getProperty("expectedText"), actualmsg,"Not added to cart");
+	   
 		 }
 
 }

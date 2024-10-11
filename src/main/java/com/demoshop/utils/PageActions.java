@@ -55,10 +55,7 @@ public class PageActions {
 	 return textList;
 	}
 	
-	//for jewelry
-	//public void setLengthBox(WebElement element, int len) {
-		//element.sendKeys(len);
-	//}
+	
 }
 
 

@@ -23,5 +23,8 @@ public static int randomNumber() {
 public static String getCurrentDateTime() {
 	String date = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(Calendar.getInstance().getTime());  
 	  return date.replaceAll("[^0-9]", "");
-}   
+} 
+
+
+
 }

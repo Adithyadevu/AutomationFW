@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.demoshop.test.JewelryTest">
+      <class name="com.demoshop.test.RemoveProductTest">
         <methods>
+          <include name="verifyProductIsRemovedFromCart"/>
           <include name="tearDown"/>
           <include name="initDriver"/>
-          <include name="verifyUserCanSelectjewelry"/>
         </methods>
-      </class> <!-- com.demoshop.test.JewelryTest -->
+      </class> <!-- com.demoshop.test.RemoveProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

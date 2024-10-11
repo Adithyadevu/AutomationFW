@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SearchTest extends BaseTest {
+	
 	@Test
 	public void verifyUserIsAbletoSearchDesiredProducts() {
 		loginPage.searchProduct(prop.getProperty("productToSearch"));
@@ -21,5 +22,7 @@ public class SearchTest extends BaseTest {
 		
 		Assert.assertTrue(istextMatched, "Product is not matching");
 	}
-
 }
+		
+	
+

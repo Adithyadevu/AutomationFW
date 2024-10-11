@@ -33,6 +33,8 @@ public class CartPage  extends PageActions{
 	  @FindBy(css=".header-links .ico-cart ")
 	  private WebElement shoppingCartHeader;
 	  
+	  @FindBy(css=".page-title")
+	  private WebElement headingCart;
 	  
 	  public void viewLaptop() {
 	    clickElement(laptop);
@@ -55,5 +57,7 @@ public class CartPage  extends PageActions{
 	  public void navigateToCart() {
 	    clickElement(shoppingCartHeader);
 	  }
-	
+	public String tittleOfCart() {
+		return getElementText(headingCart);
+	}
 }
