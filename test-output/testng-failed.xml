@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.demoshop.test.RemoveProductTest">
+      <class name="com.demoshop.test.RegisterationDP2">
         <methods>
-          <include name="verifyProductIsRemovedFromCart"/>
           <include name="tearDown"/>
           <include name="initDriver"/>
+          <include name="verifyUserIsAbleToMultipleRegisterUsingCorrectCreds"/>
         </methods>
-      </class> <!-- com.demoshop.test.RemoveProductTest -->
+      </class> <!-- com.demoshop.test.RegisterationDP2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

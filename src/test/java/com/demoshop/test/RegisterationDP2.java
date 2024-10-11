@@ -10,10 +10,10 @@ import org.testng.annotations.Test;
 import com.demoshop.model.Person;
 import com.github.javafaker.Faker;
 
-@Test
+
 public class RegisterationDP2 extends BaseTest{
 	
-	
+	@Test(dataProvider="getData")
 	public void verifyUserIsAbleToMultipleRegisterUsingCorrectCreds(List<Person> personList) {
       
 		 personList.forEach(person->{
