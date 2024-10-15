@@ -6,7 +6,7 @@ public class DataUtils {
 	
 	public static String firstName, lastName, uniqueEmail, password;
 	  
-	  public static void initUserData() {
+	  public static void initUserData() {   //test data building
 	    Faker faker= new Faker();
 	    firstName= faker.name().firstName();
 	    lastName= faker.name().lastName();

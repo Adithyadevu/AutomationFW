@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.demoshop.context.DriverManager;
 import com.demoshop.page.Objects.CartPage;
 import com.demoshop.page.Objects.CheckOutPage;
 import com.demoshop.page.Objects.JewelryPage;
@@ -22,7 +23,7 @@ import com.demoshop.page.Objects.ProductRemoveFromCart;
 import com.demoshop.page.Objects.RegisterPage;
 import com.demoshop.utils.TestProperties;
 
-    public class BaseTest {
+    public class BaseTest {  //parent class
     
     	WebDriver driver= null;
     	public Properties prop;
@@ -38,10 +39,11 @@ import com.demoshop.utils.TestProperties;
     	   
     	   System.out.println(browserName);
     		getDriver(browserName);
-    		driver.manage().window().maximize();
-    		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    		DriverManager.setDriver(driver);
+    		DriverManager.getDriver().manage().window().maximize();
+    		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     		String url=prop.getProperty(prop.getProperty("environment"));
-    		driver.get(url);
+    		DriverManager.getDriver().get(url);
     		initPages();
     		
     	}
@@ -62,29 +64,31 @@ import com.demoshop.utils.TestProperties;
     		return driver;
     	}
     	
-    	public LoginPage loginPage;  
+    	public LoginPage loginPage;
     	public RegisterPage registerPage;
     	public  ProductPage productPage;
-    	public CartPage cartPage;
-        public JewelryPage jewelryPage;
-        public CheckOutPage checkoutpage;
+    	public CartPage cartpage;
     	public ProductRemoveFromCart productremovefromcart;
-        
+    	public CheckOutPage checkoutpage;
+    	public JewelryPage jewelrypage;
+    	
     	public void initPages() {
     		loginPage= new LoginPage(driver);
     	    registerPage = new RegisterPage(driver);
     	    productPage = new ProductPage(driver);
-    	    cartPage= new CartPage(driver);
-    	    jewelryPage = new JewelryPage(driver); 
-    	    checkoutpage = new CheckOutPage(driver);
+    	    cartpage=new CartPage(driver);
     	    productremovefromcart = new ProductRemoveFromCart(driver);
-    	}
+    	    checkoutpage = new CheckOutPage(driver);
+    	    jewelrypage = new  JewelryPage(driver);
+    	    
+    	    }
     	
     	@AfterMethod(alwaysRun=true)
     	public void tearDown() {
-    		driver.quit();
+    		DriverManager.getDriver().quit();
     	}
     	
-    	}
+
+    }
    
 	

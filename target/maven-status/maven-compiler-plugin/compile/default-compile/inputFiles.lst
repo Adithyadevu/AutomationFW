@@ -6,8 +6,10 @@ C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\utils\T
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\utils\UniqueGenerator.java
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\model\Person.java
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\page\Objects\CartPage.java
+C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\Listeners\RetryAnalyzer.java
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\utils\ReportUtil.java
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\context\Constants.java
+C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\Listeners\MyTrasnformer.java
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\utils\DataUtils.java
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\utils\ExcelReader.java
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\page\Objects\ProductRemoveFromCart.java
@@ -16,3 +18,4 @@ C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\page\Ob
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\page\Objects\ProductPage.java
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\page\Objects\LoginPage.java
 C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\page\Objects\RegisterPage.java
+C:\Users\acer\eclipse-workspace\DemoWebShopFW\src\main\java\com\demoshop\context\DriverManager.java

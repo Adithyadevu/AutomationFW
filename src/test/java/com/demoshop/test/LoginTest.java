@@ -8,15 +8,15 @@ public class LoginTest extends BaseTest {
 	@Test
 	public void verifyUserIsAbleToLoginWithValidCreds() {
 
-		loginPage.navigateToLoginSection();
+			loginPage.navigateToLoginSection();
 
-		loginPage.login(prop.getProperty("email"), prop.getProperty("password"));
-		String expectedEmail = loginPage.getLoggedEmail();
+			loginPage.login(prop.getProperty("email"), prop.getProperty("password"));
+			String expectedEmail = loginPage.getLoggedEmail();
 
-		System.out.println(expectedEmail);
-		Assert.assertEquals(prop.getProperty("email"), expectedEmail, "Logged Email is not matching");
+			System.out.println(expectedEmail);
+			Assert.assertEquals(prop.getProperty("email"),expectedEmail, "Logged Email is not matching");
 
-	}
+		}
 }
 	
 	

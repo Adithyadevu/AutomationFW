@@ -23,20 +23,20 @@ public class E2ECheckoutTest extends BaseTest{
 			    loginPage.searchProduct(prop.getProperty("productToSearch"));
 			    
 			    //view product
-			    cartPage.viewLaptop();
+			    cartpage.viewLaptop();
 			    
 			    //assertion it's 14 inch Laptop
-			    String actualProductName= cartPage. getProductTitle();
+			    String actualProductName= cartpage. getProductTitle();
 			    Assert.assertEquals(prop.getProperty("expectedProductName"), actualProductName, "Product does not match");
-			    cartPage.addProductToCart();
+			    cartpage.addProductToCart();
 			      
 			     //assert that it is added to cart
-			     String actualText = cartPage.getConfirmationMsg();   
+			     String actualText = cartpage.getConfirmationMsg();   
 			     Assert.assertEquals(prop.getProperty("expectedText"), actualText, "Product is not added to cart");
 			    
 			     //navigate to cart
-			     cartPage.navigateToCart();//cartpageheading
-			     String  actualCartHeading = cartPage. tittleOfCart();
+			     cartpage.navigateToCart();//cartpageheading
+			     String  actualCartHeading = cartpage. tittleOfCart();
 			     Assert.assertEquals(prop.getProperty("expectedCartHeading"), actualCartHeading, "Not navigated to cart");
 			        
 			      //check the checkboxes

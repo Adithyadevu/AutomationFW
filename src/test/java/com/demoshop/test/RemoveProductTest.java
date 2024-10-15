@@ -11,11 +11,11 @@ public class RemoveProductTest extends BaseTest {
 		
 		loginPage.searchProduct(prop.getProperty("productToSearch"));
 		
-		cartPage.viewLaptop();
+		cartpage.viewLaptop();
 		
-		cartPage.addProductToCart();
+		cartpage.addProductToCart();
 		
-		cartPage.navigateToCart();
+		cartpage.navigateToCart();
 		
 		checkoutpage.clickCheckBox();
 		

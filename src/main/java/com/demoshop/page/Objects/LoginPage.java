@@ -56,6 +56,7 @@ private WebDriver driver;
 	
 	public void navigateToLoginSection() {
 		clickElement(loginHeader);
+		
 	}
 	
 	public void navigateToRegisterationSection() {
@@ -88,8 +89,6 @@ private WebDriver driver;
 		
 		
 	}
-	
-	
-	
+
 
 }
